@@ -1,0 +1,12 @@
+:root {
+  --main-color: #FB98B7;
+  --main-color-sheer: #FFC0D1;
+  --main-color-vivit: #FF48A5;
+  --main-color-red: #FF005F;
+  --main-color-blue: #4DCCD2;
+  --main-color-black: #333;
+}
+
+.slidev-layout {
+  position: relative;
+}

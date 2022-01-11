@@ -133,9 +133,12 @@ h1 {
 
 # 変数を扱う
 
-ドキュメント内を"variable"で検索したけどなさそう？
+$slidev.nav.currentPage（現在のページ番号）など、グローバルに用意されている変数はいくつかある
+https://sli.dev/custom/vue-context.html
 
-CSSに変数を使いたいなら./style.css（グローバルのCSSファイル）を作成し、CSS カスタムプロパティでよさそう
+独自の変数を使う方法は、ドキュメント内を"variable"で検索したけどなさそう？
+
+CSSに変数を使いたいなら./style.cssもしくは./styles/xx.css（グローバルのCSSファイル）を作成し、CSS カスタムプロパティでよさそう
 
 ```css
 // style.css

@@ -111,30 +111,7 @@ yarn.lock
 
 # 【基本】マークダウンの記法
 
-```html
-# 1ページ目タイトル
-
-Hello World
-
-<div class="pl-4">
-  <ul>
-    <li>hogehoge</li>
-    <li>fugafuga</li>
-  </ul>
-</div>
-
-<style>
-  ul {
-    list-style: none;
-  }
-</style>
-
-ハイフン3つ // コードブロック内でもハイフン3つ入れると区切られてしまうので左のようにしています
-
-# 2ページ目タイトル
-
-hogehoge
-```
+<img src="/markdown.png" width="600" class="shadow" />
 
 ---
 layout: cover

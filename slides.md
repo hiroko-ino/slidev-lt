@@ -36,6 +36,32 @@ fonts:
 }
 </style>
 
+---
+layout: image-right
+image: ./uribou_profile.jpg
+---
+
+# 自己紹介
+
+- hiroko_ino
+- Web フロントエンドエンジニア
+- 普段はReact・Web制作の人
+- 湘南住み
+- 🐗 名字がイノシシ
+
+<style>
+.slidev-layout ul {
+  margin-top: 40px;
+}
+
+.slidev-layout li {
+  font-size: 24px;
+}
+
+.slidev-layout li + li {
+  margin-top: 8px;
+}
+</style>
 
 ---
 

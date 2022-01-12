@@ -177,9 +177,9 @@ Windi CSSのクラスだけが並んでいる…🤔
 ↓↓で解決
 
 ```css
-// style.css
+// style.css等
 #slidev-goto-dialog + div > div {
-  border: 3px solid var(--main-color-sheer);
+  なにかする
 }
 ```
 </div>

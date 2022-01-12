@@ -121,6 +121,7 @@ With Yarn:
 $ yarn create slidev
 ```
 
+<div class="after" v-click>
 ↓のようなプロジェクトフォルダが作成される
 
 ```
@@ -134,6 +135,13 @@ slides.md => このファイルが単一のエントリーポイントとなり�
 vercel.json => Vercelホスティング用
 yarn.lock
 ```
+</div>
+
+<style>
+  .after {
+    margin-top: 30px;
+  }
+</style>
 
 ---
 

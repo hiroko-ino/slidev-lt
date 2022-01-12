@@ -14,13 +14,18 @@
                 type: Number,
                 default: 0,
                 required: true
-            }
+            },
+            total: {
+                type: Number,
+                default: 0,
+                required: true
+            },
         },
         computed: {
             style() {
                 return {
-                    width: `${100 / 7}%`,
-                    left: `${(100 / 7) * (this.current - 2)}%`,
+                    width: `${100 / (this.total - 1)}%`,
+                    left: `${(100 / (this.total - 1)) * (this.current - 2)}%`,
                 }
             }
         }

@@ -1,7 +1,6 @@
-<!-- hide the footer from Page 4 -->
 <template>
     <Progress
-        v-if="$slidev.nav.currentPage !== 1"
+        v-if="$slidev.nav.currentPage !== 1 && $slidev.nav.currentLayout!== 'end'"
         :current="$slidev.nav.currentPage"
         :total="$slidev.nav.total" />
 </template>

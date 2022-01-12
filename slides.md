@@ -107,6 +107,8 @@ Slidevは開発者向けに設計されたスライドツールです。 以下�
 - 簡単にホスティング（Netlify, vercel, GitHub Pages）
 - 『Webページで可能なことは何でも』の言葉とおり、VueやCSSの知識で好きなようにHack出来る（このスライドのように！）
 
+CSSの知識がある人は心地よくレイアウト出来るのに感動すると思う！
+
 <style>
 .slidev-layout ul {
   margin-top: 40px;

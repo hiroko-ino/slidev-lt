@@ -77,7 +77,7 @@ Slidevは開発者向けに設計されたスライドツールです。 以下�
 - 🤹 **Interactive** - Vueコンポーネントの埋め込みで表現を強化します
 - 🎥 **Recording** - ビルトインの録画とカメラビューがあります
 - 📤 **Portable** - PDFへのエクスポート, PNG, ホスティング可能なSPA
-- 🛠 **Hackable** - Webページで可能なことは何でも！
+- 🛠 **Hackable** - Webページで可能なことは何でも
 
 
 <style>
@@ -94,6 +94,26 @@ Slidevは開発者向けに設計されたスライドツールです。 以下�
 .slidev-layout li::before {
   content: "✅";
   margin-right: 13px;
+}
+</style>
+
+---
+
+# おすすめポイント
+
+- マークダウン内にhtmlを書いていけばかなりの自由度
+- Windi CSSを用いたスタイリング https://windicss.org/
+- ページごとに設定出来るScopedなstyle
+- 簡単にホスティング（Netlify, vercel, GitHub Pages）
+- 『Webページで可能なことは何でも』の言葉とおり、VueやCSSの知識で好きなようにHack出来る（このスライドのように！）
+
+<style>
+.slidev-layout ul {
+  margin-top: 40px;
+}
+
+.slidev-layout li + li {
+  margin-top: 8px;
 }
 </style>
 

@@ -10,7 +10,7 @@ fonts:
   serif: 'Noto Serif JP'
 ---
 
-# Slidevを<span class="blue">'Hack'</span>し<br><span class="vivit">'豊かなSlide'</span>を作る
+# Slidevを<span class="blue">プチHack</span>し<br><span class="vivit">豊かなSlide</span>を作る
 
 <p class="name">hiroko_ino</p>
 
@@ -19,7 +19,6 @@ fonts:
 <style>
 .blue {
   color: var(--main-color-blue);
-  font-style: italic;
   margin: 0 15px 0 5px;
 }
 

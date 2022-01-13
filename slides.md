@@ -45,7 +45,7 @@ image: ./uribou_profile.jpg
 - hiroko_ino
 - Web フロントエンドエンジニア
 - 普段はReact・Web制作の人
-- 湘南住み
+- 湘南住み、宮崎生まれ
 - 🐗
 
 <style>

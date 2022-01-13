@@ -46,7 +46,7 @@ image: ./uribou_profile.jpg
 - Web フロントエンドエンジニア
 - 普段はReact・Web制作の人
 - 湘南住み
-- 🐗 名字がイノシシ
+- 🐗
 
 <style>
 .slidev-layout ul {
@@ -54,7 +54,7 @@ image: ./uribou_profile.jpg
 }
 
 .slidev-layout li {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .slidev-layout li + li {

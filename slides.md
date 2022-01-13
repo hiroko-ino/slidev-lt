@@ -66,7 +66,7 @@ image: ./uribou_profile.jpg
 
 # Slidevとは?
 
-https://sli.dev/
+公式サイト： https://sli.dev/
 
 Slidevは開発者向けに設計されたスライドツールです。 以下の機能で構成されています。
 
@@ -80,19 +80,8 @@ Slidevは開発者向けに設計されたスライドツールです。 以下�
 
 
 <style>
-.slidev-layout li {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
-}
-
 .slidev-layout li + li {
   margin-top: 8px;
-}
-
-.slidev-layout li::before {
-  content: "✅";
-  margin-right: 13px;
 }
 </style>
 

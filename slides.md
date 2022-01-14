@@ -285,7 +285,7 @@ Windi CSSのクラスだけが並んでいる…🤔
 ```css
 // style.css等
 #slidev-goto-dialog + div > div {
-  なにかする
+  なにかする // https://ics.media/entry/15130/ CSSアニメーションで実現！コピペで使えるマイクロインタラクション
 }
 ```
 </div>

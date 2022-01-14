@@ -9,7 +9,7 @@ fonts:
   sans: 'Noto Sans JP'
 ---
 
-# Slidevを<span class="blue">プチHack</span>し<br><span class="vivit">豊かなSlide</span>を作る
+# <span class="vivit">Hackable</span>なスライド作成ツール<span class="blue">Slidev</span>で遊ぶ
 
 <p class="name">hiroko_ino</p>
 
@@ -18,12 +18,10 @@ fonts:
 <style>
 .blue {
   color: var(--main-color-blue);
-  margin: 0 15px 0 5px;
 }
 
 .vivit {
   color: var(--main-color-vivit);
-  margin-right: 10px;
 }
 
 .name {

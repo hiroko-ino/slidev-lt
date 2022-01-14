@@ -171,6 +171,26 @@ yarn.lock
 
 ---
 
+# フォントを扱う（Google Fonts）
+
+フォントはslides.md内の記述で適用出来る
+
+```md
+fonts:
+  # basically the text
+  sans: 'Robot'
+  # use with `font-serif` css class from windicss
+  serif: 'Robot Slab'
+  # for code blocks, inline code, etc.
+  mono: 'Fira Code
+```
+
+Googleフォントは、自動でインポートされるのでfontsの記述だけでOK！
+
+> Fonts will be imported automatically from Google Fonts. That means you can use any fonts available on Google Fonts directly.
+
+---
+
 # 変数を扱う
 
 $slidev.nav.currentPage（現在のページ番号）など、グローバルに用意されている変数はいくつかある

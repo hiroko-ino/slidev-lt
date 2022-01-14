@@ -40,13 +40,16 @@ layout: image-right
 image: ./uribou_profile.jpg
 ---
 
-# 自己紹介
+<Fadein :currentPage="$slidev.nav.currentPage" :index="2">
 
-- hiroko_ino
-- Web フロントエンドエンジニア
-- 普段はReact・Web制作の人
-- 湘南住み、宮崎生まれ
-- 🐗
+  # 自己紹介
+
+  - hiroko_ino
+  - Web フロントエンドエンジニア
+  - 普段はReact・Web制作の人
+  - 湘南住み、宮崎生まれ
+
+</Fadein>
 
 <style>
 .slidev-layout ul {
@@ -64,6 +67,12 @@ image: ./uribou_profile.jpg
 
 ---
 
+<div class="text-center">
+  <img src="/first.png" class="inline">
+</div>
+
+---
+
 # Slidevとは?
 
 公式サイト： https://sli.dev/
@@ -78,7 +87,6 @@ Slidevは開発者向けに設計されたスライドツールです。 以下�
 - 📤 **Portable** - PDFへのエクスポート, PNG, ホスティング可能なSPA
 - 🛠 **Hackable** - Webページで可能なことは何でも
 
-
 <style>
 .slidev-layout li + li {
   margin-top: 8px;
@@ -92,6 +100,7 @@ Slidevは開発者向けに設計されたスライドツールです。 以下�
 - マークダウン内にhtmlを書いていけばかなりの自由度
 - Windi CSS（Tailwind CSS 2.0完全互換の動的生成コンパイラ）が内蔵されている https://windicss.org/
 - ページごとに設定出来るScopedなstyle
+- スライドをgit管理出来る
 - 簡単にホスティング（Netlify, vercel, GitHub Pages）
 - 『Webページで可能なことは何でも』の言葉とおり、VueやCSSの知識で好きなようにカスタマイズ出来る
 
@@ -161,20 +170,6 @@ yarn.lock
 <img src="/markdown.png" width="600" class="shadow" />
 
 ---
-layout: cover
-class: 'text-center'
----
-# カスタマイズ
-
-<Decoration />
-
-<style>
-h1 {
-  color: var(--main-color-blue);
-}
-</style>
-
----
 
 # 変数を扱う
 
@@ -199,7 +194,56 @@ CSSに変数を使いたいなら./style.cssもしくは./styles/xx.css（グロ
 
 ---
 
-# カメラにborderをつける
+<Fadein :currentPage="$slidev.nav.currentPage" :index="10">
+
+  # アニメーションを扱う
+
+  Slidevには@vueuse/motion(https://motion.vueuse.org/)が内蔵されています。
+  こちらを用いてスライドに達した瞬間などにアニメーションをすることが出来ます。
+
+  ```vue
+  <template>
+      <div 
+          v-if="isShow" // $slidev.nav.currentPage === スライドのindex
+          v-motion
+          :initial="{
+              y: 50,
+          }"
+          :enter="{
+              y: 0,
+          }">
+          <slot />
+      </div>
+  </template>
+
+  // slides.md
+  <Fadein :currentPage="$slidev.nav.currentPage" :index="10"> // ここに適した変数を探したのですがタイムアップしました…
+    マークダウンなどを書く
+  </Fadein>
+ 
+  ```
+
+</Fadein>
+
+---
+layout: cover
+class: 'text-center'
+---
+# 今回の特殊なカスタマイズ
+
+<Decoration />
+
+<style>
+h1 {
+  color: var(--main-color-blue);
+}
+</style>
+---
+
+
+# カメラのCSSを調整
+
+GitHub Pagesでご覧になってる方はカメラをナビから出してみてね！
 
 ```html
 <!--v-if-->

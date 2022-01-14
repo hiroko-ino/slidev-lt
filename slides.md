@@ -164,30 +164,6 @@ yarn.lock
 
 ---
 
-# ディレクトリ構造
-
-https://sli.dev/custom/directory-structure.html
-
-```
-your-slidev/
-  ├── components/       # カスタムコンポーネント
-  ├── layouts/          # カスタムレイアウト
-  ├── public/           # 静的アセット
-  ├── setup/            # カスタム setup / hooks
-  ├── styles/           # カスタムスタイル
-  ├── index.html        # index.htmlへの注入
-  ├── slides.md         # スライドのエントリーポイント
-  └── vite.config.ts   # viteのコンフィグ
-```
-
-layouts/ :
-layout: coverなどをカスタム・新規作成
-
-index.html :
-index.htmlにマージされる記述が出来る、独自のjsファイルを読み込むことも可能
-
----
-
 # 【基本】マークダウンの記法
 
 <img src="/markdown.png" width="600" class="shadow" />
@@ -237,7 +213,7 @@ CSSに変数を使いたいなら./style.cssもしくは./styles/xx.css（グロ
 
 ---
 
-<Fadein :currentPage="$slidev.nav.currentPage" :index="10">
+<Fadein :currentPage="$slidev.nav.currentPage" :index="11">
 
   # アニメーションを扱う
 

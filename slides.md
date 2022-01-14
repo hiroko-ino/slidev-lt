@@ -359,4 +359,30 @@ Windi CSSのクラスだけが並んでいる…🤔
   };
 ```
 
+---
+
+# endを変更する
+
+最後のスライドはslides.mdでは管理できない…🤔
+
+<div v-click>
+
+layoutsの中にendがある
+
+layouts/end.vueで上書き
+
+```vue
+<template>
+  <div class="slidev-layout default">
+    // なにかする
+  </div>
+</template>
+```
+
+ローカル > テーマ > ビルトインの順番の優先度
+
+> If the layout you provide has the same name as a built-in layout or a theme layout, your custom layout will take precedence over the built-in/theme layout. The priority order is local > theme > built-in.
+
+</div>
+
 

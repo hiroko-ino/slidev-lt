@@ -7,7 +7,6 @@ drawings:
   persist: false
 fonts:
   sans: 'Noto Sans JP'
-  serif: 'Noto Serif JP'
 ---
 
 # Slidevを<span class="blue">プチHack</span>し<br><span class="vivit">豊かなSlide</span>を作る
@@ -162,6 +161,30 @@ yarn.lock
     margin-top: 30px;
   }
 </style>
+
+---
+
+# ディレクトリ構造
+
+https://sli.dev/custom/directory-structure.html
+
+```
+your-slidev/
+  ├── components/       # カスタムコンポーネント
+  ├── layouts/          # カスタムレイアウト
+  ├── public/           # 静的アセット
+  ├── setup/            # カスタム setup / hooks
+  ├── styles/           # カスタムスタイル
+  ├── index.html        # index.htmlへの注入
+  ├── slides.md         # スライドのエントリーポイント
+  └── vite.config.ts   # viteのコンフィグ
+```
+
+layouts/ :
+layout: coverなどをカスタム・新規作成
+
+index.html :
+index.htmlにマージされる記述が出来る、独自のjsファイルを読み込むことも可能
 
 ---
 

@@ -1,383 +1,375 @@
 ---
-# try also 'default' to start simple
-theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
-# apply any windi css classes to the current slide
+theme: default
 class: 'text-center'
-# https://sli.dev/custom/highlighters.html
 highlighter: shiki
-# show line numbers in code blocks
 lineNumbers: false
-# some information about the slides, markdown enabled
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# persist drawings in exports and build
 drawings:
   persist: false
+fonts:
+  sans: 'Noto Sans JP'
 ---
 
-# Welcome to Slidev
+# <span class="vivit">Hackable</span>なスライド作成ツール<span class="blue">Slidev</span>で遊ぶ
 
-Presentation slides for developers
+<p class="name">hiroko_ino</p>
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
-    class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
-
----
-
-# What is Slidev?
-
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
+<Decoration />
 
 <style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+.blue {
+  color: var(--main-color-blue);
+}
+
+.vivit {
+  color: var(--main-color-vivit);
+}
+
+.name {
+  font-size: 30px;
+  margin-top: 40px;
+  color: var(--main-color-black);
+  opacity: 1;
 }
 </style>
-
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
 layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+image: ./uribou_profile.jpg
 ---
 
-# Code
+<Fadein :currentPage="$slidev.nav.currentPage" :index="2">
 
-Use code snippets and get the highlighting directly![^1]
+  # 自己紹介
 
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
+  - hiroko_ino
+  - Web フロントエンドエンジニア
+  - 普段はReact・Web制作の人
+  - 湘南住み、宮崎生まれ
 
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = {...user, ...update}  
-  saveUser(id, newUser)
-}
-```
-
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
+</Fadein>
 
 <style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
+.slidev-layout ul {
+  margin-top: 40px;
 }
-.footnotes {
-  @apply text-sm opacity-75;
+
+.slidev-layout li {
+  font-size: 22px;
 }
-.footnote-backref {
-  display: none;
+
+.slidev-layout li + li {
+  margin-top: 8px;
 }
 </style>
 
 ---
 
-# Components
+<div class="text-center">
+  <img src="/first.png" class="inline">
+</div>
 
-<div grid="~ cols-2 gap-4">
-<div>
+---
 
-You can use Vue components directly inside your slides.
+# Slidevとは?
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
+公式サイト： https://sli.dev/
+
+Slidevは開発者向けに設計されたスライドツールです。 以下の機能で構成されています。
+
+- 📝 **Text-based** - マークダウンを使用し、スタイルを設定出来ます
+- 🎨 **Themable** - npm packageを使用しテーマをシェア出来ます
+- 🧑‍💻 **Developer Friendly** - コードハイライト, オートコンプリートを使用したライブコーディング
+- 🤹 **Interactive** - Vueコンポーネントの埋め込みで表現を強化します
+- 🎥 **Recording** - ビルトインの録画とカメラビューがあります
+- 📤 **Portable** - PDFへのエクスポート, PNG, ホスティング可能なSPA
+- 🛠 **Hackable** - Webページで可能なことは何でも
+
+<style>
+.slidev-layout li + li {
+  margin-top: 8px;
+}
+</style>
+
+---
+
+# おすすめポイント💪
+
+- マークダウン内にhtmlを書いていけばかなりの自由度
+- Windi CSS（Tailwind CSS 2.0完全互換の動的生成コンパイラ）が内蔵されている https://windicss.org/
+- ページごとに設定出来るScopedなstyle
+- スライドをgit管理出来る
+- 簡単にホスティング（Netlify, vercel, GitHub Pages）
+- 『Webページで可能なことは何でも』の言葉とおり、VueやCSSの知識で好きなようにカスタマイズ出来る
+
+CSSの知識がある人は心地よくレイアウト出来るのに感動すると思う！<br>
+デザインツール的なスライド作成ツールの作業が苦手な方に非常におすすめ
+
+<style>
+.slidev-layout ul {
+  margin-top: 40px;
+}
+
+.slidev-layout li + li {
+  margin-top: 8px;
+}
+</style>
+
+---
+layout: cover
+class: 'text-center'
+---
+# 基本的な使い方
+
+<Decoration />
+
+<style>
+h1 {
+  color: var(--main-color-blue);
+}
+</style>
+---
+
+# 【基本】始め方
+
+```
+With NPM:
+$ npm init slidev
+With Yarn:
+$ yarn create slidev
+```
+
+<div class="after" v-click>
+↓のようなプロジェクトフォルダが作成される
+
+```
+components/ => このフォルダ内のVueファイルがコンポーネントとして扱える
+.gitignore
+.npmrc
+.netlify.toml => Netlifyホスティング用
+package.json
+README.md
+slides.md => このファイルが単一のエントリーポイントとなり、プロジェクト内で一つのスライドを生成する
+vercel.json => Vercelホスティング用
+yarn.lock
+```
+</div>
+
+<style>
+  .after {
+    margin-top: 30px;
+  }
+</style>
+
+---
+
+# 【基本】マークダウンの記法
+
+<img src="/markdown.png" width="600" class="shadow" />
+
+---
+
+# フォントを扱う（Google Fonts）
+
+フォントはslides.md内の記述で適用出来る
+
+```md
+fonts:
+  # basically the text
+  sans: 'Robot'
+  # use with `font-serif` css class from windicss
+  serif: 'Robot Slab'
+  # for code blocks, inline code, etc.
+  mono: 'Fira Code
+```
+
+Googleフォントは、自動でインポートされるのでfontsの記述だけでOK！
+
+> Fonts will be imported automatically from Google Fonts. That means you can use any fonts available on Google Fonts directly.
+
+---
+
+# 変数を扱う
+
+$slidev.nav.currentPage（現在のページ番号）など、グローバルに用意されている変数はいくつかある
+https://sli.dev/custom/vue-context.html
+
+独自の変数を使う方法は、ドキュメント内を"variable"で検索したけどなさそう？
+
+CSSに変数を使いたいなら./style.cssもしくは./styles/xx.css（グローバルのCSSファイル）を作成し、CSS カスタムプロパティでよさそう
+
+```css
+// style.css
+:root {
+  --main-color: #FB98B7;
+  --main-color-sheer: #FFC0D1;
+  --main-color-vivit: #FF48A5;
+  --main-color-red: #FF005F;
+  --main-color-blue: #4DCCD2;
+  --main-color-black: #333;
+}
+```
+
+---
+
+<Fadein :currentPage="$slidev.nav.currentPage" :index="11">
+
+  # アニメーションを扱う
+
+  Slidevには@vueuse/motion(https://motion.vueuse.org/)が内蔵されています。
+  こちらを用いてスライドに達した瞬間などにアニメーションをすることが出来ます。
+
+  ```vue
+  <template>
+      <div 
+          v-if="isShow" // $slidev.nav.currentPage === スライドのindex
+          v-motion
+          :initial="{
+              y: 50,
+          }"
+          :enter="{
+              y: 0,
+          }">
+          <slot />
+      </div>
+  </template>
+
+  // slides.md
+  <Fadein :currentPage="$slidev.nav.currentPage" :index="10"> // ここに適した変数を探したのですがタイムアップしました…
+    マークダウンなどを書く
+  </Fadein>
+ 
+  ```
+
+</Fadein>
+
+---
+layout: cover
+class: 'text-center'
+---
+# 今回の特殊なカスタマイズ
+
+<Decoration />
+
+<style>
+h1 {
+  color: var(--main-color-blue);
+}
+</style>
+---
+
+
+# カメラのCSSを調整
+
+GitHub Pagesでご覧になってる方はカメラをナビから出してみてね！
 
 ```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
+<!--v-if-->
+<div id="slidev-goto-dialog" class="fixed right-5 bg-main transform transition-all -top-20" shadow="~" p="x-4 y-2" border="~ transparent rounded dark:gray-400 dark:opacity-25" data-v-7df26b02="">
+  <input type="number" disabled="" class="outline-none bg-transparent" placeholder="Goto..." data-v-7df26b02="">
 </div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
-preload: false
----
-
-# Animations
-
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
+<div class="fixed z-10" style="left: 838.861px; top: 432.301px;">
+  <div class="rounded-full shadow bg-gray-400 bg-opacity-10 overflow-hidden object-cover" style="width: 177px; height: 177px;">
+    <video autoplay="" class="object-cover min-w-full min-h-full rounded-full" style="transform: rotateY(180deg);"></video>
   </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
+  <div class="absolute bottom-0 right-0 rounded-full bg-main shadow opacity-0 shadow z-30 hover:opacity-100 dark:border dark:border-true-gray-700" style="width: 14px; height: 14px; top: 144.087px; left: 144.087px; cursor: nwse-resize;">
   </div>
 </div>
+<!--v-if-->
+```
 
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
+Windi CSSのクラスだけが並んでいる…🤔
+
+<div v-click>
+↓↓で解決
+
+```css
+// style.css等
+#slidev-goto-dialog + div > div {
+  なにかする // https://ics.media/entry/15130/ CSSアニメーションで実現！コピペで使えるマイクロインタラクション
 }
-</script>
+```
+</div>
 
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
+---
 
-[Learn More](https://sli.dev/guide/animations.html#motion)
+# 独自のプログレスバーを作る
+
+このページの下についているページの現在地を表すバーです😁
+
+```vue
+// global-bottom.vue
+<template>
+  <Progress
+    v-if="$slidev.nav.currentPage !== 1 && $slidev.nav.currentLayout!== 'end'"
+    :current="$slidev.nav.currentPage"
+    :total="$slidev.nav.total" />
+</template>
+```
+
+---
+
+```vue
+// components/Progres.vue
+<template>
+    <div class="absolute z-50 bottom-5 left-0 right-0 flex justify-center">
+        <div class="w-50 relative h-1 bg-green-500/50 rounded-full overflow-hidden">
+            <span class="absolute h-full bg-gray-500 transition-all duration-300" :style="style"></span>
+        </div>
+    </div>
+</template>
+
+<script lang="ts">
+  export default {
+    name: "Progress",
+    // propsを受け取る
+    computed: {
+      style() {
+        return {
+          width: `${100 / (this.total - 1)}%`,
+          left: `${100 / (this.total - 1) * (this.current - 2)}%`,
+        }
+      }
+    }
+  };
+```
+
+---
+
+# endを変更する
+
+最後のスライドはslides.mdでは管理できない…🤔
+
+<div v-click>
+
+layoutsの中にendがある
+
+layouts/end.vueで上書き
+
+```vue
+<template>
+  <div class="slidev-layout default">
+    // なにかする
+  </div>
+</template>
+```
+
+ローカル > テーマ > ビルトインの順番の優先度
+
+> If the layout you provide has the same name as a built-in layout or a theme layout, your custom layout will take precedence over the built-in/theme layout. The priority order is local > theme > built-in.
 
 </div>
 
 ---
 
-# LaTeX
+# 総括
 
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
+Slidevは『Hackable』な名に恥じない開発者にとってはかゆいところに手が届く
+素晴らしいスライド作成ツールだった！
 
-<br>
+Slidevは開発中なので、まだAPI等は固まっていないようです。
 
-Inline $\sqrt{3x-1}+(1+x)^2$
+> Slidev is still under heavy development. API and usages are not set in stone yet.
 
-Block
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
-
-```mermaid {scale: 0.5}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
+今後にも期待！
 
 
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
-
----
-layout: center
-class: text-center
----
-
-# Learn More
-
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)

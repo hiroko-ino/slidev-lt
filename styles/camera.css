@@ -1,0 +1,44 @@
+#slidev-goto-dialog + div > div::before,
+#slidev-goto-dialog + div > div::after {
+  content: "";
+  opacity: 0.6;
+  top: -1%;
+  left: -1%;
+  position: absolute;
+  background: var(--main-color-blue);
+  width: 102%;
+  height: 102%;
+  transform-origin: 50% 48%;
+  border-radius: 47%;
+  animation: rotation 3s infinite linear;
+  z-index: -1;
+}
+
+#slidev-goto-dialog + div > div::before {
+  opacity: 0.2;
+  background: var(--main-color-vivit);
+  animation: rotation 5s infinite linear;
+}
+
+#slidev-goto-dialog + div > div::after {
+  animation: rotation 2.5s infinite linear;
+}
+
+/* ピンク色の背景のアニメーション */
+@keyframes color-fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

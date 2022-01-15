@@ -1,11 +1,5 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# 1/15日 エンジニアと人生LT会で発表したスライドです。
 
-To start the slide show:
+下記にホスティングしています。
 
-- `npm install`
-- `npm run dev`
-- visit http://localhost:3030
-
-Edit the [slides.md](./slides.md) to see the changes.
-
-Learn more about Slidev on [documentations](https://sli.dev/).
+https://inspiring-allen-a98eff.netlify.app/1

@@ -100,6 +100,7 @@ Slidevは開発者向けに設計されたスライドツールです。 以下�
 - スライドをgit管理出来る
 - 簡単にホスティング（Netlify, vercel, GitHub Pages）
 - 『Webページで可能なことは何でも』の言葉とおり、VueやCSSの知識で好きなようにカスタマイズ出来る
+- ***マークダウンなのでZenn等への転化が捗る！！！！***
 
 CSSの知識がある人は心地よくレイアウト出来るのに感動すると思う！<br>
 デザインツール的なスライド作成ツールの作業が苦手な方に非常におすすめ
@@ -260,7 +261,7 @@ h1 {
 
 # カメラのCSSを調整
 
-GitHub Pagesでご覧になってる方はカメラをナビから出してみてね！
+Netlifyでご覧になってる方はカメラをナビから出してみてね！
 
 ```html
 <!--v-if-->
@@ -309,7 +310,7 @@ Windi CSSのクラスだけが並んでいる…🤔
 ---
 
 ```vue
-// components/Progres.vue
+// components/Progress.vue
 <template>
     <div class="absolute z-50 bottom-5 left-0 right-0 flex justify-center">
         <div class="w-50 relative h-1 bg-green-500/50 rounded-full overflow-hidden">

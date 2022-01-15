@@ -359,4 +359,17 @@ layouts/end.vueで上書き
 
 </div>
 
+---
+
+# 総括
+
+Slidevは『Hackable』な名に恥じない開発者にとってはかゆいところに手が届く
+素晴らしいスライド作成ツールだった！
+
+Slidevは開発中なので、まだAPI等は固まっていないようです。
+
+> Slidev is still under heavy development. API and usages are not set in stone yet.
+
+今後にも期待！
+
 

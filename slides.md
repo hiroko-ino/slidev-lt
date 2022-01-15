@@ -261,8 +261,6 @@ h1 {
 
 # カメラのCSSを調整
 
-Netlifyでご覧になってる方はカメラをナビから出してみてね！
-
 ```html
 <!--v-if-->
 <div id="slidev-goto-dialog" class="fixed right-5 bg-main transform transition-all -top-20" shadow="~" p="x-4 y-2" border="~ transparent rounded dark:gray-400 dark:opacity-25" data-v-7df26b02="">
